@@ -35,7 +35,7 @@ FILESGOHERE
   </filelist>
  </release>
  <deps>
-  <dep type="pkg" rel="ge" version="1.2">Pear</dep>
+  <dep type="pkg" rel="ge" version="1.2">PEAR</dep>
  </deps>
 </package>
 EOF

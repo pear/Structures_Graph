@@ -125,8 +125,7 @@ class Structures_Graph_Manipulator_AcyclicTest {
     */
     function isAcyclic(&$graph) {
         // We only test graphs
-        if (!is_a($graph, 'Structures_Graph')) 
-            Pear::raiseError('Structures_Graph_Manipulator_AcyclicTest::isAcyclic received an object that is not a Structures_Graph', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if (!is_a($graph, 'Structures_Graph')) return Pear::raiseError('Structures_Graph_Manipulator_AcyclicTest::isAcyclic received an object that is not a Structures_Graph', STRUCTURES_GRAPH_ERROR_GENERIC);
         if (!$graph->isDirected()) return false; // Only directed graphs may be acyclic
 
         return Structures_Graph_Manipulator_AcyclicTest::_isAcyclic($graph);

@@ -132,10 +132,8 @@ class Structures_Graph_Manipulator_TopologicalSorter {
     */
     function sort(&$graph) {
         // We only sort graphs
-        if (!is_a($graph, 'Structures_Graph')) 
-            Pear::raiseError('Structures_Graph_Manipulator_TopologicalSorter::sort received an object that is not a Structures_Graph', STRUCTURES_GRAPH_ERROR_GENERIC);
-        if (!Structures_Graph_Manipulator_AcyclicTest::isAcyclic($graph))
-            Pear::raiseError('Structures_Graph_Manipulator_TopologicalSorter::sort received an graph that has cycles', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if (!is_a($graph, 'Structures_Graph')) return Pear::raiseError('Structures_Graph_Manipulator_TopologicalSorter::sort received an object that is not a Structures_Graph', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if (!Structures_Graph_Manipulator_AcyclicTest::isAcyclic($graph)) return Pear::raiseError('Structures_Graph_Manipulator_TopologicalSorter::sort received an graph that has cycles', STRUCTURES_GRAPH_ERROR_GENERIC);
 
         Structures_Graph_Manipulator_TopologicalSorter::_sort($graph);
         $result = array();

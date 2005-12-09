@@ -175,7 +175,7 @@ class Structures_Graph_Node {
             if ($nullIfNonexistent) {
                 return null;
             } else {
-                Pear::raiseError('Structures_Graph_Node::getMetadata: Requested key does not exist', STRUCTURES_GRAPH_ERROR_GENERIC);
+                return Pear::raiseError('Structures_Graph_Node::getMetadata: Requested key does not exist', STRUCTURES_GRAPH_ERROR_GENERIC);
             }
         }
     }
@@ -235,13 +235,10 @@ class Structures_Graph_Node {
     */
     function connectTo(&$destinationNode) {
         // We only connect to nodes
-        if (!is_a($destinationNode, 'Structures_Graph_Node')) 
-            Pear::raiseError('Structures_Graph_Node::connectTo received an object that is not a Structures_Graph_Node', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if (!is_a($destinationNode, 'Structures_Graph_Node')) return Pear::raiseError('Structures_Graph_Node::connectTo received an object that is not a Structures_Graph_Node', STRUCTURES_GRAPH_ERROR_GENERIC);
         // Nodes must already be in graphs to be connected
-        if ($this->_graph == null)
-            Pear::raiseError('Structures_Graph_Node::connectTo Tried to connect a node that is not in a graph', STRUCTURES_GRAPH_ERROR_GENERIC);
-        if ($destinationNode->getGraph() == null) 
-            Pear::raiseError('Structures_Graph_Node::connectTo Tried to connect to a node that is not in a graph', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if ($this->_graph == null) return Pear::raiseError('Structures_Graph_Node::connectTo Tried to connect a node that is not in a graph', STRUCTURES_GRAPH_ERROR_GENERIC);
+        if ($destinationNode->getGraph() == null) return Pear::raiseError('Structures_Graph_Node::connectTo Tried to connect to a node that is not in a graph', STRUCTURES_GRAPH_ERROR_GENERIC);
         // Connect here
         $this->_connectTo($destinationNode);
         // If graph is undirected, connect back
