@@ -113,8 +113,6 @@ class Structures_Graph_Manipulator_TopologicalSorter {
 
         // Cleanup visited marks
         foreach($nodeKeys as $key) $nodes[$key]->unsetMetadata('topological-sort-visited');
-
-        return $result;
     }
     /* }}} */
 
