@@ -173,9 +173,11 @@ class Structures_Graph_Node {
             return $this->_metadata[$key];
         } else {
             if ($nullIfNonexistent) {
-                return null;
+                $a = null;
+                return $a;
             } else {
-                return Pear::raiseError('Structures_Graph_Node::getMetadata: Requested key does not exist', STRUCTURES_GRAPH_ERROR_GENERIC);
+                $a = Pear::raiseError('Structures_Graph_Node::getMetadata: Requested key does not exist', STRUCTURES_GRAPH_ERROR_GENERIC);
+                return $a;
             }
         }
     }
