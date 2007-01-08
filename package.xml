@@ -15,10 +15,10 @@ as well as for characteristic extraction from the graph topology.</description>
   <email>sergio.carvalho@portugalmail.com</email>
   <active>yes</active>
  </lead>
- <date>2007-01-07</date>
+ <date>2007-xx-xx</date>
  <time>21:42:59</time>
  <version>
-  <release>1.0.2</release>
+  <release>1.0.x</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -27,8 +27,7 @@ as well as for characteristic extraction from the graph topology.</description>
  </stability>
  <license uri="http://opensource.org/licenses/lgpl-license.php">LGPL</license>
  <notes>
- - Bug #9682 only variables can be returned by reference
- - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()</notes>
+ </notes>
  <contents>
   <dir baseinstalldir="" name="/">
    <dir name="docs">
