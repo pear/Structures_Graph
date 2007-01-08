@@ -30,7 +30,7 @@ as well as for characteristic extraction from the graph topology.</description>
  - Bug #9682 only variables can be returned by reference
  - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()</notes>
  <contents>
-  <dir baseinstalldir="Structures" name="/">
+  <dir baseinstalldir="" name="/">
    <dir name="docs">
     <dir name="html">
      <dir name="media">
