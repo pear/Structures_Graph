@@ -16,7 +16,7 @@ mkdir -p $TARGET_DIR
  </description>
  <maintainers>
   <maintainer>
-   <user>sergio.carvalho</user>
+   <user>sergiosgc</user>
    <name>Sérgio Carvalho</name>
    <email>sergio.carvalho@portugalmail.com</email>
    <role>lead</role>
@@ -24,11 +24,11 @@ mkdir -p $TARGET_DIR
  </maintainers>
 
  <release>
-  <version>1.0.1</version>
-  <date>2004-05-02</date>
+  <version>1.0.3</version>
+  <date>2007-01-30</date>
   <state>stable</state>
   <notes>
-  Version 1.0.1 fixes a bug in Node::connectTo
+  Version 1.0.3 is functionally equivalent to 1.0.2, but released with a v1.0 package.xml to deal with bug #9965:installation problem
   </notes>
   <filelist>
 FILESGOHERE
@@ -42,7 +42,7 @@ EOF
 for dir in $TARGET_DIRS
 do
     mkdir -p $TARGET_DIR/$dir
-    cp `find $dir -type f -maxdepth 1 | grep -v .arch-ids` $TARGET_DIR/$dir
+    cp `find $dir -maxdepth 1 -type f | grep -v .arch-ids` $TARGET_DIR/$dir
 done
 cp LICENSE BUILD
 (cd BUILD; pear package)
