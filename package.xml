@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.5.0RC2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-    http://pear.php.net/dtd/tasks-1.0.xsd
-    http://pear.php.net/dtd/package-2.0
-    http://pear.php.net/dtd/package-2.0.xsd">
- <name>Structures_Graph</name>
- <channel>pear.php.net</channel>
- <summary>Graph datastructure manipulation library</summary>
- <description>Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0">
+  <name>Structures_Graph</name>
+  <summary>Graph datastructure manipulation library</summary>
+  <description>Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed
 and undirected graphs, with data and metadata stored in nodes. The library provides functions for graph traversing
 as well as for characteristic extraction from the graph topology.</description>
- <lead>
-  <name>Sérgio Carvalho</name>
-  <user>sergiosgc</user>
-  <email>sergio.carvalho@portugalmail.com</email>
-  <active>yes</active>
- </lead>
- <date>2007-xx-xx</date>
- <time>21:42:59</time>
- <version>
-  <release>1.0.x</release>
-  <api>1.0.0</api>
- </version>
- <stability>
-  <release>stable</release>
-  <api>stable</api>
- </stability>
- <license uri="http://opensource.org/licenses/lgpl-license.php">LGPL</license>
- <notes>
- </notes>
- <contents>
+  <maintainers>
+    <maintainer>
+      <user>sergiosgc</user>
+      <name>Sérgio Carvalho</name>
+      <email>sergio.carvalho@portugalmail.com</email>
+      <role>lead</role>
+    </maintainer>
+  </maintainers>
+  <release>
+    <version>1.0.2</version>
+    <date>2007-01-07</date>
+    <license>LGPL</license>
+    <state>stable</state>
+    <notes>
+ - Bug #9682 only variables can be returned by reference
+ - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()</notes>
+    </notes>
+    <filelist>
   <dir baseinstalldir="" name="/">
    <dir name="docs">
     <dir name="html">
@@ -85,33 +80,6 @@ as well as for characteristic extraction from the graph topology.</description>
    <file name="package.sh" role="data" />
    <file name="publish.sh" role="data" />
   </dir> <!-- / -->
- </contents>
- <dependencies>
-  <required>
-   <php>
-    <min>4.2.0</min>
-   </php>
-   <pearinstaller>
-    <min>1.4.3</min>
-   </pearinstaller>
-  </required>
- </dependencies>
- <phprelease />
- <changelog>
-  <release>
-   <version>
-    <release>1.0.2</release>
-    <api>1.0.0</api>
-   </version>
-   <stability>
-    <release>stable</release>
-    <api>stable</api>
-   </stability>
-   <date>2007-01-07</date>
-   <license uri="http://opensource.org/licenses/lgpl-license.php">LGPL</license>
-   <notes>
- - Bug #9682 only variables can be returned by reference
- - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()</notes>
+    </filelist>
   </release>
- </changelog>
 </package>
