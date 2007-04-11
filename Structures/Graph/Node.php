@@ -232,7 +232,7 @@ class Structures_Graph_Node {
     * 
     * If the graph is not directed, the reverse arc, connecting $destinationNode to $this is also created.
     *
-    * @param    Structures_Graph Node to connect to
+    * @param    Structures_Graph_Node Node to connect to
     * @access	public
     */
     function connectTo(&$destinationNode) {
