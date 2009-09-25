@@ -25,25 +25,14 @@
 //
 
 require_once 'Structures/Graph.php';
-require_once 'PHPUnit.php';
+require_once 'PHPUnit/Framework.php';
 
 /**
  * @access private
  */
-class BasicGraph extends PHPUnit_TestCase
+class BasicGraph extends PHPUnit_Framework_TestCase
 {
     var $_graph = null;
-
-    // constructor of the test suite
-    function StringTest($name) {
-       $this->PHPUnit_TestCase($name);
-    }
-
-    function setUp() {
-    }
-
-    function tearDown() {
-    }
 
     function test_create_graph() {
         $this->_graph = new Structures_Graph();
@@ -89,7 +78,7 @@ class BasicGraph extends PHPUnit_TestCase
         $this->_graph = new Structures_Graph();
         $data = 1;
         $node = new Structures_Graph_Node();
-        $node->setData(&$data);
+        $node->setData($data);
         $this->_graph->addNode($node);
         $data = 2;
         $dataInNode =& $this->_graph->getNodes();
@@ -102,7 +91,7 @@ class BasicGraph extends PHPUnit_TestCase
         $this->_graph = new Structures_Graph();
         $data = 1;
         $node = new Structures_Graph_Node();
-        $node->setMetadata('5', &$data);
+        $node->setMetadata('5', $data);
         $data = 2;
         $dataInNode =& $node->getMetadata('5');
         $this->assertTrue($data === $dataInNode);
