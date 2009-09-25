@@ -10,7 +10,7 @@ while (<>) {
 	    $md5sum = substr $md5sum, 0, 32;
 #    $_ =~ s/\//\\\//g;
             chomp($_);
-            print "    <file role=\"php\" md5sum=\"$md5sum\" name=\"$_\" />\n";
+            print "    <file role=\"php\" name=\"$_\" />\n";
         }
     }
 }

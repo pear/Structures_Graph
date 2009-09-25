@@ -4,7 +4,7 @@ TARGET_DIR=BUILD/
 TARGET_DIRS=`find Structures -type d | grep -v .arch-ids`
 mkdir -p $TARGET_DIR
 ./genpackage.xml.pl > BUILD/package.xml << EOF
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <package version="1.0">
  <name>Structures_Graph</name>
  <summary>Graph datastructure manipulation library</summary>
@@ -17,7 +17,7 @@ mkdir -p $TARGET_DIR
  <maintainers>
   <maintainer>
    <user>sergiosgc</user>
-   <name>Sérgio Carvalho</name>
+   <name>SÃ©rgio Carvalho</name>
    <email>sergio.carvalho@portugalmail.com</email>
    <role>lead</role>
   </maintainer>
@@ -25,10 +25,11 @@ mkdir -p $TARGET_DIR
 
  <release>
   <version>1.0.3</version>
-  <date>2007-01-30</date>
+  <date>2009-09-25</date>
   <state>stable</state>
   <notes>
-  Version 1.0.3 is functionally equivalent to 1.0.2, but released with a v1.0 package.xml to deal with bug #9965:installation problem
+  Version 1.0.3 is functionally equivalent to 1.0.2, but released with a v1.0 package.xml to deal with bug #9965:installation problem [sergiosgc]
+  Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
   </notes>
   <filelist>
 FILESGOHERE
@@ -45,7 +46,7 @@ do
     cp `find $dir -maxdepth 1 -type f | grep -v .arch-ids` $TARGET_DIR/$dir
 done
 cp LICENSE BUILD
-(cd BUILD; pear package)
-rm -Rf BUILD/package.xml BUILD/LICENSE BUILD/Structures
+(cd BUILD; pear convert; pear package)
+rm -Rf BUILD/package.xml BUILD/package2.xml BUILD/LICENSE BUILD/Structures
 
 
