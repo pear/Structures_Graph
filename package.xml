@@ -1,30 +1,43 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
-<package version="1.0">
-  <name>Structures_Graph</name>
-  <summary>Graph datastructure manipulation library</summary>
-  <description>Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>Structures_Graph</name>
+ <channel>pear.php.net</channel>
+ <summary>Graph datastructure manipulation library</summary>
+ <description>Structures_Graph is a package for creating and manipulating graph datastructures. It allows building of directed
 and undirected graphs, with data and metadata stored in nodes. The library provides functions for graph traversing
 as well as for characteristic extraction from the graph topology.</description>
-  <maintainers>
-    <maintainer>
-      <user>sergiosgc</user>
-      <name>Sérgio Carvalho</name>
-      <email>sergio.carvalho@portugalmail.com</email>
-      <role>lead</role>
-    </maintainer>
-  </maintainers>
-  <release>
-    <version>1.0.2</version>
-    <date>2007-01-07</date>
-    <license>LGPL</license>
-    <state>stable</state>
-    <notes>
- - Bug #9682 only variables can be returned by reference
- - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()
-    </notes>
-    <filelist>
-  <dir baseinstalldir="" name="/">
+ <lead>
+  <name>Sérgio Carvalho</name>
+  <user>sergiosgc</user>
+  <email>sergio.carvalho@portugalmail.com</email>
+  <active>yes</active>
+ </lead>
+ <helper>
+  <name>Brett Bieber</name>
+  <user>saltybeagle</user>
+  <email>brett.bieber@gmail.com</email>
+  <active>yes</active>
+ </helper>
+ <date>2009-10-11</date>
+ <time>14:29:26</time>
+ <version>
+  <release>1.0.3</release>
+  <api>1.0.3</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license>LGPL License</license>
+ <notes>
+Bugfix Release:
+Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xml file.
+* Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
+* Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
+* Update package.xml
+ </notes>
+ <contents>
+  <dir baseinstalldir="/" name="/">
    <dir name="docs">
     <dir name="html">
      <dir name="media">
@@ -72,14 +85,63 @@ as well as for characteristic extraction from the graph topology.</description>
     <dir name="testCase">
      <file name="BasicGraph.php" role="test" />
     </dir> <!-- /tests/testCase -->
-    <file name="all-tests.php" role="test" />
-    <file name="README" role="test" />
+    <file name="AllTests.php" role="test" />
    </dir> <!-- /tests -->
-   <file name="genpackage.xml.pl" role="data" />
    <file name="LICENSE" role="data" />
-   <file name="package.sh" role="data" />
-   <file name="publish.sh" role="data" />
   </dir> <!-- / -->
-    </filelist>
+ </contents>
+ <compatible>
+  <name>PEAR</name>
+  <channel>pear.php.net</channel>
+  <min>1.5.0RC3</min>
+  <max>1.9.0</max>
+ </compatible>
+ <dependencies>
+  <required>
+   <php>
+    <min>4.2.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.3</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2007-01-07</date>
+   <license uri="http://opensource.org/licenses/lgpl-license.php">LGPL</license>
+   <notes>
+- Bug #9682 only variables can be returned by reference
+- fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()
+   </notes>
   </release>
+  <release>
+   <version>
+    <release>1.0.3</release>
+    <api>1.0.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2009-10-11</date>
+   <license>LGPL License</license>
+   <notes>
+Bugfix Release:
+Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xml file.
+* Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
+* Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
+* Update package.xml
+   </notes>
+  </release>
+ </changelog>
 </package>
