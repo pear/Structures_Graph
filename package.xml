@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
  <name>Structures_Graph</name>
  <channel>pear.php.net</channel>
  <summary>Graph datastructure manipulation library</summary>
@@ -18,10 +18,10 @@ as well as for characteristic extraction from the graph topology.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </helper>
- <date>2009-10-11</date>
- <time>14:29:26</time>
+ <date>2010-10-25</date>
+ <time>21:44:18</time>
  <version>
-  <release>1.0.3</release>
+  <release>1.0.4</release>
   <api>1.0.3</api>
  </version>
  <stability>
@@ -31,10 +31,7 @@ as well as for characteristic extraction from the graph topology.</description>
  <license>LGPL License</license>
  <notes>
 Bugfix Release:
-Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xml file.
-* Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
-* Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
-* Update package.xml
+* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -94,7 +91,7 @@ Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xm
   <name>PEAR</name>
   <channel>pear.php.net</channel>
   <min>1.5.0RC3</min>
-  <max>1.9.0</max>
+  <max>1.9.1</max>
  </compatible>
  <dependencies>
   <required>
@@ -141,6 +138,22 @@ Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xm
 * Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
 * Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
 * Update package.xml
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.4</release>
+    <api>1.0.3</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-10-25</date>
+   <license>LGPL License</license>
+   <notes>
+Bugfix Release:
+* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
    </notes>
   </release>
  </changelog>

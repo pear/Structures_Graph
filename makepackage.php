@@ -46,13 +46,10 @@ $pfm->setChannel('pear.php.net');
 $pfm->setAPIStability('stable');
 $pfm->setReleaseStability('stable');
 $pfm->setAPIVersion('1.0.3');
-$pfm->setReleaseVersion('1.0.3');
+$pfm->setReleaseVersion('1.0.4');
 $pfm->setNotes('
 Bugfix Release:
-Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xml file.
-* Correct invalid md5 sum preventing installation with pyrus [saltybeagle]
-* Add compatible tag for PEAR 1.5.0RC3-1.9.0 [saltybeagle]
-* Update package.xml
+* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
 ');
 
 $pfm->updateMaintainer('helper','saltybeagle','Brett Bieber','brett.bieber@gmail.com');
@@ -61,7 +58,7 @@ $pfm->clearDeps();
 $pfm->setPhpDep('4.2.0');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->clearCompatible();
-$pfm->addCompatiblePackage('PEAR', 'pear.php.net', '1.5.0RC3', '1.9.0');
+$pfm->addCompatiblePackage('PEAR', 'pear.php.net', '1.5.0RC3', '1.9.1');
 $pfm->generateContents();
 if (isset($_SERVER['argv']) && $_SERVER['argv'][1] == 'make') {
     $pfm->writePackageFile();
