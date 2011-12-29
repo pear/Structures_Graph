@@ -59,6 +59,7 @@ $pfm->setPhpDep('4.2.0');
 $pfm->setPearinstallerDep('1.4.3');
 $pfm->clearCompatible();
 $pfm->addCompatiblePackage('PEAR', 'pear.php.net', '1.5.0RC3', '1.9.1');
+$pfm->addReplacement('tests/helper.inc', 'pear-config', '@php_dir@', 'php_dir');
 $pfm->generateContents();
 if (isset($_SERVER['argv']) && $_SERVER['argv'][1] == 'make') {
     $pfm->writePackageFile();
