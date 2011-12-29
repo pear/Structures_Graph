@@ -20,15 +20,15 @@ class Structures_Graph_AllTests
         PHPUnit_TextUI_TestRunner::run(self::suite());
     }
 
-	public static function suite()
+    public static function suite()
     {
-		$suite = new PHPUnit_Framework_TestSuite('Structures_Graph Tests');
+        $suite = new PHPUnit_Framework_TestSuite('Structures_Graph Tests');
 
         $dir = new GlobIterator(dirname(__FILE__) . '/*Test.php');
         $suite->addTestFiles($dir);
 
-		return $suite;
-	}
+        return $suite;
+    }
 }
 
 if ($call_main) {
