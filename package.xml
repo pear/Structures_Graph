@@ -79,10 +79,11 @@ Bugfix Release:
     <file name="Graph.php" role="php" />
    </dir> <!-- /Structures -->
    <dir name="tests">
-    <dir name="testCase">
-     <file name="BasicGraph.php" role="test" />
-    </dir> <!-- /tests/testCase -->
     <file name="AllTests.php" role="test" />
+    <file name="BasicGraphTest.php" role="test" />
+    <file name="helper.inc" role="test">
+     <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
+    </file>
    </dir> <!-- /tests -->
    <file name="LICENSE" role="data" />
   </dir> <!-- / -->
