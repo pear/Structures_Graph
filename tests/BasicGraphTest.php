@@ -77,23 +77,23 @@ class BasicGraph extends PHPUnit_Framework_TestCase
         $this->_graph = new Structures_Graph();
         $data = 1;
         $node = new Structures_Graph_Node();
-        $node->setData(&$data);
+        $node->setData($data);
         $this->_graph->addNode($node);
         $data = 2;
         $dataInNode =& $this->_graph->getNodes();
         $dataInNode =& $dataInNode[0];
         $dataInNode =& $dataInNode->getData();
-        $this->assertTrue($data === $dataInNode);
+        $this->assertEquals($data, $dataInNode);
     }
 
     function test_metadata_references() {
         $this->_graph = new Structures_Graph();
         $data = 1;
         $node = new Structures_Graph_Node();
-        $node->setMetadata('5', &$data);
+        $node->setMetadata('5', $data);
         $data = 2;
         $dataInNode =& $node->getMetadata('5');
-        $this->assertTrue($data === $dataInNode);
+        $this->assertEquals($data, $dataInNode);
     }
    
     function test_metadata_key_exists() {
