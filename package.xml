@@ -36,37 +36,11 @@ Bugfix Release:
  <contents>
   <dir baseinstalldir="/" name="/">
    <dir name="docs">
-    <dir name="html">
-     <dir name="media">
-      <file name="banner.css" role="doc" />
-      <file name="stylesheet.css" role="doc" />
-     </dir> <!-- /docs/html/media -->
-     <dir name="Structures_Graph">
-      <file name="Structures_Graph.html" role="doc" />
-      <file name="Structures_Graph_Manipulator_AcyclicTest.html" role="doc" />
-      <file name="Structures_Graph_Manipulator_TopologicalSorter.html" role="doc" />
-      <file name="Structures_Graph_Node.html" role="doc" />
-      <file name="tutorial_Structures_Graph.pkg.html" role="doc" />
-      <file name="_Structures_Graph_Manipulator_AcyclicTest_php.html" role="doc" />
-      <file name="_Structures_Graph_Manipulator_TopologicalSorter_php.html" role="doc" />
-      <file name="_Structures_Graph_Node_php.html" role="doc" />
-      <file name="_Structures_Graph_php.html" role="doc" />
-     </dir> <!-- /docs/html/Structures_Graph -->
-     <file name="classtrees_Structures_Graph.html" role="doc" />
-     <file name="elementindex.html" role="doc" />
-     <file name="elementindex_Structures_Graph.html" role="doc" />
-     <file name="errors.html" role="doc" />
-     <file name="index.html" role="doc" />
-     <file name="li_Structures_Graph.html" role="doc" />
-     <file name="packages.html" role="doc" />
-     <file name="todolist.html" role="doc" />
-    </dir> <!-- /docs/html -->
     <dir name="tutorials">
      <dir name="Structures_Graph">
       <file name="Structures_Graph.pkg" role="doc" />
      </dir> <!-- /docs/tutorials/Structures_Graph -->
     </dir> <!-- /docs/tutorials -->
-    <file name="generate.sh" role="doc" />
    </dir> <!-- /docs -->
    <dir name="Structures">
     <dir name="Graph">
