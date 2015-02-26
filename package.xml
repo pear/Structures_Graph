@@ -18,20 +18,21 @@ as well as for characteristic extraction from the graph topology.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </helper>
- <date>2010-10-25</date>
- <time>21:44:18</time>
+ <date>2015-02-26</date>
+ <time>23:44:18</time>
  <version>
-  <release>1.0.4</release>
-  <api>1.0.3</api>
+  <release>1.1.0</release>
+  <api>1.1.0</api>
  </version>
  <stability>
   <release>stable</release>
   <api>stable</api>
  </stability>
- <license>LGPL License</license>
+ <license>LGPL-3.0+</license>
  <notes>
-Bugfix Release:
-* Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
+* Set minimum PHP version to 5.3
+* Fix bug #19367: Incorrect FSF address in LICENSE
+* Change license from LGPL-2.1+ to LGPL-3.0+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -55,6 +56,9 @@ Bugfix Release:
    <dir name="tests">
     <file name="AllTests.php" role="test" />
     <file name="BasicGraphTest.php" role="test" />
+    <file name="TopologicalSorterTest.php" role="test" />
+    <file name="AcyclicTestTest.php" role="test" />
+    <file name="BasicGraphTest.php" role="test" />
     <file name="helper.inc" role="test">
      <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
     </file>
@@ -62,6 +66,7 @@ Bugfix Release:
    <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
+
  <compatible>
   <name>PEAR</name>
   <channel>pear.php.net</channel>
@@ -71,15 +76,18 @@ Bugfix Release:
  <dependencies>
   <required>
    <php>
-    <min>4.2.0</min>
+    <min>5.3.0</min>
    </php>
    <pearinstaller>
     <min>1.4.3</min>
    </pearinstaller>
   </required>
  </dependencies>
+
  <phprelease />
+
  <changelog>
+
   <release>
    <version>
     <release>1.0.2</release>
@@ -96,6 +104,7 @@ Bugfix Release:
 - fix Bug #9661 notice in Structures_Graph_Manipulator_Topological::sort()
    </notes>
   </release>
+
   <release>
    <version>
     <release>1.0.3</release>
@@ -115,6 +124,7 @@ Version 1.0.3 is functionally equivalent to 1.0.2 but with an updated package.xm
 * Update package.xml
    </notes>
   </release>
+
   <release>
    <version>
     <release>1.0.4</release>
@@ -131,5 +141,24 @@ Bugfix Release:
 * Bug #17108 BasicGraph::test_directed_degree fails on PHP 5 [clockwerx]
    </notes>
   </release>
+
+  <release>
+   <version>
+    <release>1.1.0</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2015-02-26</date>
+   <license>LGPL-3.0+</license>
+   <notes>
+* Set minimum PHP version to 5.3
+* Fix bug #19367: Incorrect FSF address in LICENSE
+* Change license from LGPL-2.1+ to LGPL-3.0+
+   </notes>
+  </release>
+
  </changelog>
 </package>
