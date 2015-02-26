@@ -59,7 +59,7 @@ Bugfix Release:
      <tasks:replace from="@php_dir@" to="php_dir" type="pear-config" />
     </file>
    </dir> <!-- /tests -->
-   <file name="LICENSE" role="data" />
+   <file name="LICENSE" role="doc" />
   </dir> <!-- / -->
  </contents>
  <compatible>
