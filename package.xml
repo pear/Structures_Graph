@@ -18,10 +18,10 @@ as well as for characteristic extraction from the graph topology.</description>
   <email>brett.bieber@gmail.com</email>
   <active>yes</active>
  </helper>
- <date>2015-02-26</date>
- <time>23:44:18</time>
+ <date>2015-07-20</date>
+ <time>22:04:18</time>
  <version>
-  <release>1.1.0</release>
+  <release>1.1.1</release>
   <api>1.1.0</api>
  </version>
  <stability>
@@ -30,9 +30,7 @@ as well as for characteristic extraction from the graph topology.</description>
  </stability>
  <license>LGPL-3.0+</license>
  <notes>
-* Set minimum PHP version to 5.3
-* Fix bug #19367: Incorrect FSF address in LICENSE
-* Change license from LGPL-2.1+ to LGPL-3.0+
+* Fix deprecated constructor warning on PHP 7 [cweiske]
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
@@ -157,6 +155,22 @@ Bugfix Release:
 * Set minimum PHP version to 5.3
 * Fix bug #19367: Incorrect FSF address in LICENSE
 * Change license from LGPL-2.1+ to LGPL-3.0+
+   </notes>
+  </release>
+
+  <release>
+   <version>
+    <release>1.1.1</release>
+    <api>1.1.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2015-07-20</date>
+   <license>LGPL-3.0+</license>
+   <notes>
+    * Fix deprecated constructor warning on PHP 7 [cweiske]
    </notes>
   </release>
 
