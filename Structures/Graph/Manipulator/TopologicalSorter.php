@@ -29,7 +29,6 @@
  * @package Structures_Graph
  */
 
-require_once 'PEAR.php';
 require_once 'Structures/Graph.php';
 require_once 'Structures/Graph/Node.php';
 require_once 'Structures/Graph/Manipulator/AcyclicTest.php';
@@ -140,14 +139,14 @@ class Structures_Graph_Manipulator_TopologicalSorter
     {
         // We only sort graphs
         if (!is_a($graph, 'Structures_Graph')) {
-            return Pear::raiseError(
+            throw new Exception(
                 'Structures_Graph_Manipulator_TopologicalSorter::sort received'
                 . ' an object that is not a Structures_Graph',
                 STRUCTURES_GRAPH_ERROR_GENERIC
             );
         }
         if (!Structures_Graph_Manipulator_AcyclicTest::isAcyclic($graph)) {
-            return Pear::raiseError(
+            throw new Exception(
                 'Structures_Graph_Manipulator_TopologicalSorter::sort'
                 . ' received an graph that has cycles',
                 STRUCTURES_GRAPH_ERROR_GENERIC

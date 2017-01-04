@@ -30,7 +30,6 @@
  */
 
 /* dependencies {{{ */
-require_once 'PEAR.php';
 require_once 'Structures/Graph/Node.php';
 /* }}} */
 
@@ -110,7 +109,7 @@ class Structures_Graph
     {
         // We only add nodes
         if (!is_a($newNode, 'Structures_Graph_Node')) {
-            return Pear::raiseError(
+            throw new Exception(
                 'Structures_Graph::addNode received an object that is not'
                 . ' a Structures_Graph_Node',
                 STRUCTURES_GRAPH_ERROR_GENERIC
@@ -138,7 +137,7 @@ class Structures_Graph
             }
             $this->_nodes[$key] = $savedData;
             if ($referenceIsEqualFlag) {
-                return Pear::raiseError(
+                throw new Exception(
                     'Structures_Graph::addNode received an object that is'
                     . ' a duplicate for this dataset',
                     STRUCTURES_GRAPH_ERROR_GENERIC
