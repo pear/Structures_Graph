@@ -99,7 +99,7 @@ class Structures_Graph_Manipulator_TopologicalSorter
             $leafNodes = array();
             foreach ($nodeKeys as $key) {
                 if ((!$nodes[$key]->getMetadata('topological-sort-visited'))
-                    && static::_nonVisitedInDegree($nodes[$key]) == 0
+                    && Structures_Graph_Manipulator_TopologicalSorter::_nonVisitedInDegree($nodes[$key]) == 0
                 ) {
                     $leafNodes[] =& $nodes[$key];
                 }
@@ -135,7 +135,7 @@ class Structures_Graph_Manipulator_TopologicalSorter
      *
      * @return array The graph's nodes, sorted by topological order.
      */
-    public static function sort(&$graph)
+    public static function sort($graph)
     {
         // We only sort graphs
         if (!is_a($graph, 'Structures_Graph')) {
