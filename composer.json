@@ -16,7 +16,7 @@
         "./"
     ],
     "license": "PHP License",
-    "name": "pear/structures_graph",
+    "name": "siu-toba/structures_graph",
     "support": {
         "source": "https://github.com/pear/Structures_Graph"
     },
