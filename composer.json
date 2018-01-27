@@ -15,7 +15,7 @@
     "include-path": [
         "./"
     ],
-    "license": "PHP License",
+    "license": "PHP-3.01",
     "name": "pear/structures_graph",
     "support": {
         "source": "https://github.com/pear/Structures_Graph"
