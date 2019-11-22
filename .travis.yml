@@ -34,6 +34,7 @@ script:
   - pear package-validate
   - pear install --force *.tgz
   - pear list
+  - pear run-tests -r tests/
   - composer install
   - ./vendor/bin/phpunit -c phpunit.xml.dist
 
