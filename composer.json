@@ -1,4 +1,12 @@
 {
+    "name": "pear/structures_graph",
+    "description": "More info available on: http://pear.php.net/package/Structures_Graph",
+    "homepage": "http://pear.php.net/package/Structures_Graph",
+    "license": "PHP-3.01",
+    "support": {
+        "source": "https://github.com/pear/Structures_Graph"
+    },
+    "type": "library",
     "authors": [
         {
             "email": "sergiosgc@gmail.com",
@@ -11,14 +19,14 @@
             "Structures": "./"
         }
     },
-    "description": "More info available on: http://pear.php.net/package/Structures_Graph",
     "include-path": [
         "./"
     ],
-    "license": "PHP-3.01",
-    "name": "pear/structures_graph",
-    "support": {
-        "source": "https://github.com/pear/Structures_Graph"
+    "require": {
+        "php": ">=5.3",
+        "pear/pear-core-minimal": "^1.10.1"
     },
-    "type": "library"
+    "require-dev": {
+        "phpunit/phpunit": "@stable"
+    }
 }
