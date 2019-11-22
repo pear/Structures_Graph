@@ -21,6 +21,19 @@ matrix:
     - php: 5.3
       dist: precise
     
+install:
+  - pear list
+  - pear channel-update pear
+  - pear upgrade pear/pear
+
 script:
-  - cd tests
-  - phpunit .
+  - pear list
+  - pear install --force package.xml
+  - pear list
+  - pear package
+  - pear package-validate
+  - pear install --force *.tgz
+  - pear list
+  - composer install
+  - ./vendor/bin/phpunit -c phpunit.xml.dist
+
