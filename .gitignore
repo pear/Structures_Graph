@@ -1,1 +1,16 @@
-dist/
+# composer related
+composer.lock
+composer.phar
+vendor
+
+# Eclipse
+.buildpath
+.project
+.settings
+
+# tarballs
+*.tgz
+
+# buildtools
+.phpunit*
+build/
