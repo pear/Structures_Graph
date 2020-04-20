@@ -21,7 +21,7 @@ matrix:
 install:
   - pear list
   - pear channel-update pear
-  - pear upgrade pear/pear
+  - pear upgrade --force pear/pear
 
 script:
   - pear list
