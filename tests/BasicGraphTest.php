@@ -84,7 +84,7 @@ class BasicGraph extends \PHPUnit\Framework\TestCase
         $dataInNode =& $this->_graph->getNodes();
         $dataInNode =& $dataInNode[0];
         $dataInNode =& $dataInNode->getData();
-        $this->assertEquals($data, $dataInNode);
+        $this->assertNotEquals($data, $dataInNode);
     }
 
     function test_metadata_references() {
@@ -94,7 +94,7 @@ class BasicGraph extends \PHPUnit\Framework\TestCase
         $node->setMetadata('5', $data);
         $data = 2;
         $dataInNode =& $node->getMetadata('5');
-        $this->assertEquals($data, $dataInNode);
+        $this->assertNotEquals($data, $dataInNode);
     }
    
     function test_metadata_key_exists() {
