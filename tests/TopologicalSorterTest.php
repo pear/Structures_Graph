@@ -2,7 +2,7 @@
 require_once dirname(__FILE__) . '/helper.inc';
 require_once 'Structures/Graph/Manipulator/TopologicalSorter.php';
 
-class TopologicalSorterTest extends PHPUnit_Framework_TestCase
+class TopologicalSorterTest extends \PHPUnit\Framework\TestCase
 {
     public function testSort()
     {

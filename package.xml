@@ -52,7 +52,6 @@ as well as for characteristic extraction from the graph topology.</description>
     <file name="Graph.php" role="php" />
    </dir> <!-- /Structures -->
    <dir name="tests">
-    <file name="AllTests.php" role="test" />
     <file name="BasicGraphTest.php" role="test" />
     <file name="TopologicalSorterTest.php" role="test" />
     <file name="AcyclicTestTest.php" role="test" />

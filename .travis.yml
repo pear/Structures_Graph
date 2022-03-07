@@ -1,11 +1,37 @@
 language: php
 sudo: false
 php:
-  - 7
+  - nightly
+  - 7.4
+  - 7.3
+  - 7.2
+  - 7.1
+  - 7.0
   - 5.6
-  - 5.5
-  - 5.4
-  - 5.3
+matrix:
+  fast_finish: true
+  allow_failures:
+    - php: nightly
+  include:
+    - php: 5.5
+      dist: trusty
+    - php: 5.4
+      dist: precise
+    
+install:
+  - pear list
+  - pear channel-update pear
+  - pear upgrade --force pear/pear
+
 script:
-  - cd tests
-  - phpunit .
+  - pear list
+  - pear install --force package.xml
+  - pear list
+  - pear package
+  - pear package-validate
+  - pear install --force *.tgz
+  - pear list
+  - pear run-tests -r tests/
+  - composer install
+  - ./vendor/bin/phpunit -c phpunit.xml.dist
+

@@ -29,7 +29,7 @@ require_once dirname(__FILE__) . '/helper.inc';
 /**
  * @access private
  */
-class BasicGraph extends PHPUnit_Framework_TestCase
+class BasicGraph extends \PHPUnit\Framework\TestCase
 {
     var $_graph = null;
 
@@ -47,6 +47,7 @@ class BasicGraph extends PHPUnit_Framework_TestCase
         $this->_graph->addNode($node);
         $node = new Structures_Graph_Node($data);
         $this->_graph->addNode($node);
+	$this->assertTrue(true);
     }
 
     function test_connect_node() {
