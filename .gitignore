@@ -14,4 +14,4 @@ vendor
 # buildtools
 .phpunit*
 build/
-/nbproject/private/
+nbproject/
